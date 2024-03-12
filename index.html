@@ -1,5 +1,3 @@
-<script src="https://d3js.org/d3-selection.v1.min.js"></script>
-
 
 <style>
   .ttooltip {
@@ -37,12 +35,17 @@
       padding: 0 0 0.5em 0;
       width: 180px;
     }
+
+    
   </style>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
 </head>
 
 <script type="module">
-  import Scatterplot from './src/deepscatter';
-  import { select } from 'd3-selection';
+  import Scatterplot from './dist/deepscatter.js';
+  const select = d3.select;
   window.select = select; // For the click function below.
   const prefs = {
     source_url: '/tiles',
